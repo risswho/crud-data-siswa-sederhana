@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('nomor_induk')->unique();
             $table->string('nama_lengkap');
-            $table->enum('jenis_kelasmin', ['L', 'P']);
+            $table->enum('jenis_kelamin', ['L', 'P']);
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->text('alamat');
