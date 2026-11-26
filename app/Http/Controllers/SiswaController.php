@@ -13,13 +13,15 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        //
+        $siswa = Siswa::all();
+
+        return view('siswa.index', ['siswa' => $siswa]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-        public function create()
+    public function create()
     {
         return view('siswa.create');
     }
@@ -41,7 +43,9 @@ class SiswaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $siswa = Siswa::findOrFail($id);
+
+        return view('siswa.show', compact('siswa'));
     }
 
     /**
@@ -80,11 +84,7 @@ class SiswaController extends Controller
 
 // class SiswaController extends Controller
 // {
-//     public function all()
-//     {
-//         $siswa = Siswa::all();
-//         return redirect('/siswa');
-//     }
+//     
 
 //     public function index()
 //     {
@@ -101,9 +101,7 @@ class SiswaController extends Controller
 
 //     public function detail($id)
 //     {
-//         $siswa = Siswa::findOrFail($id);
-
-//         return;
+//         
 //     }
 
 //     public function update(createSiswaRequest $request, $id)

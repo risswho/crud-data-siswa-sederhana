@@ -26,7 +26,7 @@ class createSiswaRequest extends FormRequest
         return [
             'nomor_induk' => ['required', 'integer', 'unique:siswas,nomor_induk'],
             'nama_lengkap' => ['required', 'string'],
-            'jenis_kelamin' => ['required', 'in:L,P'],
+            'jenis_kelamin' => ['required', 'in:Laki Laki,Perempuan'],
             'tempat_lahir' => ['required', 'string'],
             'tanggal_lahir' => ['required', 'date'],
             'alamat' => ['required', 'string'],

@@ -32,8 +32,8 @@
             <label for="">jenis kelamin</label>
             <select name="jenis_kelamin" id="">
                 <option value="">Pilih jenis kelamin</option>
-                <option value="L">laki-laki</option>
-                <option value="P">perempuan</option>
+                <option value="Laki Laki">laki-laki</option>
+                <option value="Perempuan">perempuan</option>
             </select>
 
             @error('jenis_kelamin')
@@ -88,5 +88,7 @@
 
         <button type="submit">Tambah</button>
     </form>
+
+    <a href="{{ route('siswa.index') }}">Kembali ke Daftar Siswa</a>
 </body>
 </html>
